@@ -1,3 +1,4 @@
+//image-app-improved.js 
 (function() {
   // http://stackoverflow.com/questions/10906734/how-to-upload-image-into-html5-canvas
   var original;
@@ -6,7 +7,7 @@
   var canvas = document.querySelector('#image');
   var ctx = canvas.getContext('2d');
 
-  var imageWorker = new Worker('scripts/worker.js');
+  var imageWorker = new Worker('scripts/worker-improved.js');
 
   function handleImage(e){
     var reader = new FileReader();
@@ -22,7 +23,7 @@
     }
     reader.readAsDataURL(e.target.files[0]);
   }
-
+  
   // greys out the buttons while manipulation is happening
   // un-greys out the buttons when the manipulation is done
   function toggleButtonsAbledness() {

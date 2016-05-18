@@ -1,4 +1,4 @@
-// Image manipulation logic from github.com/jwill/psychic-lana
+ // Image manipulation logic from github.com/jwill/psychic-lana
 
 function getManipFunc(type) {
 

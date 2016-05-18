@@ -1,3 +1,4 @@
+//worker-improved.js
 importScripts('imageManips-improved.js');
 
 this.onmessage = function(e) {
