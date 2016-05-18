@@ -39,7 +39,6 @@
   function manipulateImage(type) {
     var a, b, g, i, imageData, j, length, pixel, r, ref;
     imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-
     toggleButtonsAbledness();
 
     // Hint! This is where you should post messages to the web worker and
@@ -50,6 +49,7 @@
     toggleButtonsAbledness();
     var image =e.data;
     if (image) return ctx.putImageData(e.data, 0, 0);
+    console.log("no manipulated image returned")
   }
   };
 
