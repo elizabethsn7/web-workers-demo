@@ -44,9 +44,9 @@
 
     // Hint! This is where you should post messages to the web worker and
     // receive messages from the web worker.
-    myWorker.postMessage({'imageData': imageData, 'type': type});
+    imageWorker.postMessage({'imageData': imageData, 'type': type});
     
-    myWorker.onMessage = function(e) {
+    imageWorker.onMessage = function(e) {
     toggleButtonsAbledness();
     var image =e.data;
     if (image) return ctx.putImageData(e.data, 0, 0);
