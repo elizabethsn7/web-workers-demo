@@ -1,4 +1,4 @@
-(function(){
+(function() {
   // http://stackoverflow.com/questions/10906734/how-to-upload-image-into-html5-canvas
   var original;
   var imageLoader = document.querySelector('#imageLoader');
@@ -41,12 +41,12 @@
     imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     toggleButtonsAbledness();
     imageWorker.postMessage({'imageData': imageData, 'type': type});
-    
-    imageWorker.onMessage = function(e) {
-    toggleButtonsAbledness();
-    var image = e.data;
-    if (image) return ctx.putImageData(e.data, 0, 0);
-    console.log("no manipulated image returned")
+
+    imageWorker.onmessage = function(e) {
+      toggleButtonsAbledness();
+      var image = e.data;
+      if (image) return ctx.putImageData(e.data, 0, 0);
+      console.log("No manipulated image returned.")
     }
 
     imageWorker.onerror = function(error) {
