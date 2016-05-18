@@ -48,6 +48,9 @@
      myWorker.postMessage ({
       'imageData': imageData, 'type': type
     });
+     myWorker.onMessage = function(e) {
+
+     }
 
   function revertImage() {
     return ctx.putImageData(original, 0, 0);
@@ -68,5 +71,4 @@
   document.querySelector('#revert').onclick = function() {
     revertImage();
   };
-})
-();
+});
