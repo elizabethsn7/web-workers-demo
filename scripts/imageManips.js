@@ -1,7 +1,7 @@
- // Image manipulation logic from github.com/jwill/psychic-lana
+// Image manipulation logic from github.com/jwill/psychic-lana
 
 function getManipFunc(type) {
-  
+
   var func = function() {};
 
   function makePixelInverted(r, g, b, a) {
