@@ -27,4 +27,3 @@ this.onmessage = function(e) {
     postMessage(undefined);
   }
 }
-ya ya  ya
