@@ -71,3 +71,4 @@
   document.querySelector('#revert').onclick = function() {
     revertImage();
   };
+};

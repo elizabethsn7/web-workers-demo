@@ -19,7 +19,8 @@ this.onmessage = function(e) {
     }
     postMessage(imageData);
     postMessage(type);
-  } catch (e) {
+  }
+   catch (e) {
     function ManipulationException(message) {
       this.name = "ManipulationException";
       this.message = message;
