@@ -6,6 +6,8 @@
   var canvas = document.querySelector('#image');
   var ctx = canvas.getContext('2d');
 
+  var myWorker = new Worker("worker.js");
+
   function handleImage(e){
     var reader = new FileReader();
     reader.onload = function(event){
@@ -40,9 +42,12 @@
 
     toggleButtonsAbledness();
 
+
     // Hint! This is where you should post messages to the web worker and
     // receive messages from the web worker.
-  var myWorker = new Worker("worker.js");
+     myWorker.postMessage ({
+      'imageData': imageData, 'type': type
+    });
 
   function revertImage() {
     return ctx.putImageData(original, 0, 0);
@@ -63,4 +68,5 @@
   document.querySelector('#revert').onclick = function() {
     revertImage();
   };
-})();
+})
+();
